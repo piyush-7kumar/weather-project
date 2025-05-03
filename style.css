@@ -1,3 +1,65 @@
 body{
-    background-color: #E4EFE7;
+    background-color: #9ACBD0;
+    margin: 0;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    background-image: url(image/Lite\ Theme.png);
+    /* background-image: url(image/Dark\ Theme.png); */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-attachment: fixed; /* Optional: Fixed background while scrolling */
+}
+#content-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center children horizontally */
+    /* Semi-transparent overlay to improve text readability */
+    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+    
+}
+.pageTitle {
+    color: white;
+    padding-left: 1em; 
+    align-self: flex-start;
+}
+.searchBar{
+    display: flex;
+    justify-content: center;   /* horizontal centering*/
+    width: 100%;
+    max-width: 500px; /* Prevent search bar from getting too wide */
+    margin-top: 10%; /* Vertical spacing */
+}
+.searchBar input {
+    padding: 10px 15px;
+    margin-right: 10px;
+    width: 70%;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.5); /* 50% transparent white */
+    backdrop-filter: blur(5px); /* Optional: adds frosted glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
+  }
+  
+  .searchBar button {
+    padding: 10px 20px;
+    background-color: rgba(74, 143, 231, 0.8); /* 80% opaque blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* matching border */
+  }
+  
+  .searchBar button:hover {
+    background-color: rgba(58, 123, 213, 0.9); /* slightly darker on hover */
+}
+
+.searchBar input::placeholder {
+    color: rgba(0, 0, 0, 0.7); /* darker placeholder */
 }
