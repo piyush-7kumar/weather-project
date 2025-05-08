@@ -11,6 +11,10 @@ body{
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Optional: Fixed background while scrolling */
 }
+h3{
+    font-weight: bold;
+    color: #393E46;
+}
 
 #content-body {
     flex: 1;
@@ -83,7 +87,8 @@ body{
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     margin-bottom: 20%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
 .city-name{
     margin-top: 0;
@@ -113,6 +118,9 @@ body{
     .searchBar {
       margin-bottom: 10%; /* Tablets */
     }
+    .pageTitle {
+        font-size: 1.75em;
+    }
 }
   
 @media (max-width: 600px) {
@@ -120,5 +128,7 @@ body{
       margin-bottom: 20%; /* Mobiles */
       width: 80%;
     }
-    
+    .pageTitle {
+        font-size: 1.5em;
+    }
 }
