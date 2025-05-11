@@ -11,53 +11,21 @@
 <body>
     
     <div id="content-body">
-        <h1 class="pageTitle">Weather App</h1>
+        <h1 id="pageTitle">Weather App</h1>
 
-        <div class="searchBar">
-            <input type="search" placeholder="Search City..." >
+        <div id="searchBar">
+            <input type="search" placeholder="Search City... " id="input-field">
             <button>Search</button>
         </div>
 
-        <div class="card-container">
-
-            <div class="default-card">
-              <h3 class="city-name">Mumbai, India</h3>
-              <div class="icon">☀️</div>
-              <div class="temp">27°C</div>
-              <div class="description">Clear</div>
-              <div class="details">
-                High 30°C<br>
-                Humidity 55%
-              </div>
-            </div>
-
-            <div class="default-card">
-              <h3 class="city-name">Delhi, India</h3>
-              <div class="icon">☀️</div>
-              <div class="temp">27°C</div>
-              <div class="description">Clear</div>
-              <div class="details">
-                High 30°C<br>
-                Humidity 55%
-              </div>
-            </div>
-
-            <div class="default-card">
-              <h3 class="city-name">Tokyo, Japan</h3>
-              <div class="icon">☀️</div>
-              <div class="temp">27°C</div>
-              <div class="description">Clear</div>
-              <div class="details">
-                High 30°C<br>
-                Humidity 55%
-              </div>
-            </div>
-            
+        <div id="card-container">
+          <!-- default cards will be here -->
         </div>
        
     </div>
 
     <!-- JS file -->
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
+
 </body>
 </html>
