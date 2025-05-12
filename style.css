@@ -11,37 +11,6 @@ body{
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Optional: Fixed background while scrolling */
 }
-.city {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.icon img {
-    width: 90px;
-    height: 90px;
-    /* margin: 10px 0; */
-}
-.temp {
-    font-size: 1.8em;
-    margin: 5px 0;
-}
-.description {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
-}
-.details {
-    font-size: 1em;
-    font-weight: bolder;
-    color: #777;
-    text-align: left;
-    padding-left: 15px;
-}
-.description{
-    display: flex;
-    justify-content: space-around;
-}
-
 #content-body {
     flex: 1;
     display: flex;
@@ -53,23 +22,20 @@ body{
      /* Adjust opacity as needed*/
     
 }
-
 #pageTitle {
     color: #393E46;
     font-weight: bold;
-    padding-left: 1em; 
+    padding-left: 1em;
     align-self: flex-start;
+    font-size: clamp(1.5em, 4vw, 2em);  /* Responsive font size */
 }
-
-#searchBar{
+#searchBar {
     display: flex;
-    justify-content: center;   /* horizontal centering*/
-    width: 100%;
-    max-width: 500px; /* Prevent search bar from getting too wide */
-    margin-top: 10%; 
-    margin-bottom: 5%;
+    justify-content: center;
+    width: 80%;
+    margin-top: 10vh;    /* Scales with screen height */
+    margin-bottom: 8vh;  /* Slightly more space for small screens */
 }
-
 #searchBar input {
     padding: 10px 15px;
     margin-right: 10px;
@@ -81,7 +47,6 @@ body{
     backdrop-filter: blur(5px); /* Optional: adds frosted glass effect */
     border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border */
 }
-  
 #searchBar button {
     padding: 10px 20px;
     background-color: rgba(74, 143, 231, 1); 
@@ -93,81 +58,9 @@ body{
     transition: background-color 0.3s;
     border: 1px solid rgba(255, 255, 255, 0.3); /* matching border */
 }
-  
 #searchBar button:hover {
     background-color: rgba(58, 123, 213, 0.9); /* slightly darker on hover */
 }
-
 #searchBar input::placeholder {
     color: rgba(0, 0, 0, 0.7); /* darker placeholder */
-}
-
-#card-container {
-    display: grid;
-    padding: 20px;
-    /* margin: 0 auto; */
-    max-width: 1800px;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-}
-
-.default-card {
-    background-color: rgba(255, 255, 255, 0.4); /* 50% transparent white */
-    border: 1px solid rgba(255, 255, 255, 0.5); /* subtle border */
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
-    margin-bottom: 20%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-    width: 200px;
-    height: 200px;
-    
-}
-
-.default-card * {
-    font-weight: bold !important;
-    color: #393E46 !important;
-    
-}
-.city-name{
-    margin-top: 0;
-}
-
-.default-card:hover {
-    transform: translateY(-5px); 
-    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.8);
-}
-
-
-@media (min-width: 768px) {
-    #card-container {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px; 
-    }
-}  
-
-@media (min-width: 1024px) {
-    #card-container {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 50px;
-    }
-}
-
-@media (max-width: 1024px) {
-    #searchBar {
-      margin-bottom: 10%; /* Tablets */
-    }
-    #pageTitle {
-        font-size: 1.75em;
-    }
-}
-  
-@media (max-width: 600px) {
-    #searchBar {
-      margin-bottom: 20%; /* Mobiles */
-      width: 80%;
-    }
-    #pageTitle {
-        font-size: 1.5em;
-    }
 }
