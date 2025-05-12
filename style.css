@@ -11,9 +11,35 @@ body{
     background-repeat: no-repeat; /* Prevent repeating */
     background-attachment: fixed; /* Optional: Fixed background while scrolling */
 }
-h3{
+.city {
+    font-size: 1.5em;
     font-weight: bold;
-    color: #393E46;
+    margin-bottom: 10px;
+}
+.icon img {
+    width: 90px;
+    height: 90px;
+    /* margin: 10px 0; */
+}
+.temp {
+    font-size: 1.8em;
+    margin: 5px 0;
+}
+.description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+.details {
+    font-size: 1em;
+    font-weight: bolder;
+    color: #777;
+    text-align: left;
+    padding-left: 15px;
+}
+.description{
+    display: flex;
+    justify-content: space-around;
 }
 
 #content-body {
@@ -21,13 +47,16 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center; /* Center children horizontally */
-    /* Semi-transparent overlay to improve text readability */
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust opacity as needed */
+
+    /* Semi-transparent overlay to improve text readability */ 
+    background-color: rgba(0, 0, 0, 0.1);
+     /* Adjust opacity as needed*/
     
 }
 
 #pageTitle {
-    color: white;
+    color: #393E46;
+    font-weight: bold;
     padding-left: 1em; 
     align-self: flex-start;
 }
@@ -55,7 +84,7 @@ h3{
   
 #searchBar button {
     padding: 10px 20px;
-    background-color: rgba(74, 143, 231, 0.8); /* 80% opaque blue */
+    background-color: rgba(74, 143, 231, 1); 
     color: white;
     border: none;
     border-radius: 4px;
@@ -76,19 +105,28 @@ h3{
 #card-container {
     display: grid;
     padding: 20px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     max-width: 1800px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .default-card {
-    background: rgba(255, 255, 255, 0.75);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.4); /* 50% transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.5); /* subtle border */
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
     margin-bottom: 20%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    
+}
+
+.default-card * {
+    font-weight: bold !important;
+    color: #393E46 !important;
     
 }
 .city-name{
@@ -97,7 +135,7 @@ h3{
 
 .default-card:hover {
     transform: translateY(-5px); 
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.8);
 }
 
 
