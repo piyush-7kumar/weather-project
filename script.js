@@ -12,19 +12,12 @@ async function getWeatherDetail(city) {
         return {
              cityName : city,
              country : data.sys?.country,
-             description : data.weather?.[0]?.description,
              mainDescription : data.weather?.[0]?.main,
              icon : data.weather?.[0].icon,
              temperature : Math.round(data.main?.temp),
              feelsLike : Math.round(data.main?.feels_like),
-             minTemp : Math.round(data.main?.temp_min),
              maxTemp : Math.round(data.main?.temp_max),
-             pressure : Math.round(data.main?.pressure),
              humidity : Math.round(data.main?.humidity),
-             seaLevel : data.main?.sea_level,
-             groundLevel : data.main?.grnd_level,
-             visibility : Math.round(data?.visibility),
-             wind : data.wind?.speed,
         }
 
     } catch (error) {
@@ -57,20 +50,33 @@ function defaultCards (weatherData){
 
     cityCard.innerHTML = `
     <div class="city">${weatherData.cityName}, ${weatherData.country}</div>
-    <div class="description">
-      <div class="icon"><img src="${iconUrl}" alt="weather icon"></div>
-      <div>
+    
+    <div class="icon"><img src="${iconUrl}" alt="weather icon"></div>
+     
+    <div>
         <div class="temp">${weatherData.temperature}°C</div>
         <div class="description">${weatherData.mainDescription}</div>
-      </div>
     </div>
-    <div class="details">
-      <p>High ${weatherData.maxTemp}°C</p>
-      <p>Humidity ${weatherData.humidity}%</P>
-    </div>
+    
   `;
 
   cardContainer.appendChild(cityCard);
 
 
 }
+document.getElementById('searchBtn').addEventListener('click', () => {
+  const cityName = document.getElementById('input-field').value.trim();
+  
+  if (cityName) {
+    window.location.href = `detailed-card/index.html?city=${encodeURIComponent(cityName)}`;
+  } else {
+    alert("Please enter a city name first!");
+  }
+});
+
+
+document.getElementById('input-field').addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    document.getElementById('searchBtn').click();
+  }
+});

@@ -9,7 +9,7 @@
     
 }
 .default-card {
-    background-color: rgba(255, 255, 255, 0.4); /* 50% transparent white */
+    background-color: rgba(255, 255, 255, 0.4); /* 40% transparent white */
     border: 1px solid rgba(255, 255, 255, 0.5); /* subtle border */
     border-radius: 10px;
     padding: 20px;
@@ -17,22 +17,24 @@
     margin-bottom: 20%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    min-height: 200px; 
-    min-width: 200px;
-    flex: 1 1 200px;    
+    min-height: 250px; 
+    min-width: 250px;
+    max-width: 400px;
+    flex: 1 1 250px;    
     box-sizing: border-box;
 }
 .default-card * {
     font-weight: bold !important;
-    color: #393E46 !important;
+    color: #1E3E62 !important;
     
-}
-.city-name{
-    margin-top: 0;
 }
 .default-card:hover {
     transform: translateY(-5px); 
     box-shadow: 0 6px 16px rgba(255, 255, 255, 0.8);
+}
+
+.city-name{
+    margin-top: 0;
 }
 .city {
     font-size: 1.5em;
@@ -49,16 +51,10 @@
 }
 .description {
     font-size: 1em;
-    color: #555;
+    color: #443C68;
     margin-bottom: 10px;
 }
-.details {
-    font-size: 1em;
-    font-weight: bolder;
-    color: #777;
-    text-align: left;
-    padding-left: 15px;
-}
+
 .description{
     display: flex;
     justify-content: space-around;

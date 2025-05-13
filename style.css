@@ -15,8 +15,7 @@ body{
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center children horizontally */
-
+    align-items: center; 
     /* Semi-transparent overlay to improve text readability */ 
     background-color: rgba(0, 0, 0, 0.1);
      /* Adjust opacity as needed*/
