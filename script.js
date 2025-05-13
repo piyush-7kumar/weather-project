@@ -1,5 +1,4 @@
-
-const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+const apiKey = "7b4dc2f210bd5f1d2af21e35e0016bdc";
 async function getWeatherDetail(city) {
   const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
     
