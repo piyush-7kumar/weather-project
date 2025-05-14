@@ -1,0 +1,11 @@
+(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))o(e);new MutationObserver(e=>{for(const n of e)if(n.type==="childList")for(const s of n.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&o(s)}).observe(document,{childList:!0,subtree:!0});function i(e){const n={};return e.integrity&&(n.integrity=e.integrity),e.referrerPolicy&&(n.referrerPolicy=e.referrerPolicy),e.crossOrigin==="use-credentials"?n.credentials="include":e.crossOrigin==="anonymous"?n.credentials="omit":n.credentials="same-origin",n}function o(e){if(e.ep)return;e.ep=!0;const n=i(e);fetch(e.href,n)}})();const m="7b4dc2f210bd5f1d2af21e35e0016bdc";async function f(t){var i,o,e,n,s,a,d,l;const r=`https://api.openweathermap.org/data/2.5/weather?q=${t}&units=metric&appid=${m}`;try{const c=await(await fetch(r)).json();return{cityName:t,country:(i=c.sys)==null?void 0:i.country,mainDescription:(e=(o=c.weather)==null?void 0:o[0])==null?void 0:e.main,icon:(n=c.weather)==null?void 0:n[0].icon,temperature:Math.round((s=c.main)==null?void 0:s.temp),feelsLike:Math.round((a=c.main)==null?void 0:a.feels_like),maxTemp:Math.round((d=c.main)==null?void 0:d.temp_max),humidity:Math.round((l=c.main)==null?void 0:l.humidity)}}catch(u){return console.error("Error fetching weather:",u),null}}const p=["Paris","Delhi","Tokyo"];p.forEach(async t=>{const r=await f(t);y(r)});function y(t){const r=document.getElementById("card-container"),i=document.createElement("div");i.className="default-card";const o=`https://openweathermap.org/img/wn/${t.icon}@2x.png`;i.innerHTML=`
+    <div class="city">${t.cityName}, ${t.country}</div>
+    
+    <div class="icon"><img src="${o}" alt="weather icon"></div>
+     
+    <div>
+        <div class="temp">${t.temperature}°C</div>
+        <div class="description">${t.mainDescription}</div>
+    </div>
+    
+  `,r.appendChild(i)}document.getElementById("searchBtn").addEventListener("click",()=>{const t=document.getElementById("input-field").value.trim();t?window.location.href=`src/detailed-card/index.html?city=${encodeURIComponent(t)}`:alert("Please enter a city name first!")});document.getElementById("input-field").addEventListener("keypress",t=>{t.key==="Enter"&&document.getElementById("searchBtn").click()});
