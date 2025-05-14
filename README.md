@@ -6,7 +6,7 @@ A sleek and simple weather forecasting web application built using **HTML**, **C
 
 ## 🔗 Live Demo
 
-[View on GitHub Pages](https://piyush-7kumar.github.io/weather-project)
+[View on GitHub Pages](https://weather-project-pk.netlify.app/)
 
 ---
 
