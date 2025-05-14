@@ -5,7 +5,7 @@
     min-height: 100vh; /* Ensure body takes full viewport height */
     display: flex;
     flex-direction: column;
-    background-image: url(../image/Lite\ Theme.png);
+    background-image: url(../assets/image/Lite\ Theme.png);
     /* background-image: url(image/Dark\ Theme.png); */
     background-size: cover; /* Cover the entire viewport */
     background-position: center; /* Center the image */

@@ -67,7 +67,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
   const cityName = document.getElementById('input-field').value.trim();
   
   if (cityName) {
-    window.location.href = `detailed-card/index.html?city=${encodeURIComponent(cityName)}`;
+    window.location.href = `src/detailed-card/index.html?city=${encodeURIComponent(cityName)}`;
   } else {
     alert("Please enter a city name first!");
   }
